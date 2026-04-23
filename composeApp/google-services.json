@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "483817313399",
+    "project_id": "kotlinproject-2e1e0",
+    "storage_bucket": "kotlinproject-2e1e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483817313399:android:c3e6b2518ef3d6957fe272",
+        "android_client_info": {
+          "package_name": "com.ucb.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5u8tK5hrgwSvUOA6M7pdTJjqk6WApHlc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

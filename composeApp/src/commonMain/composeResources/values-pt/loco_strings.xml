@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Loco xml export: Android strings
+ Project: KotlinProject
+ Locale: pt, Portuguese
+ Exported by: Nahuel Pairumani Saavedra
+ Exported at: Wed, 15 Apr 2026 17:03:33 -0400
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="portfolio_title">Meu Portfólio de Criptomoedas</string>
+    <string name="portfolio_balance_total">Saldo total</string>
+    <string name="portfolio_add_funds">Adicionar Fundos</string>
+    <string name="portfolio_amount_deposit">Valor a depositar</string>
+    <string name="portfolio_register_deposit">Depósito de Registro</string>
+</resources>
