@@ -15,6 +15,7 @@ import com.ucb.app.product_detail.presentation.viewmodel.ProductDetailViewModel
 import com.ucb.app.signin.presentation.viewmodel.SigninViewModel
 import com.ucb.app.remoteconfig.presentation.viewmodel.RemoteConfigViewModel
 import com.ucb.app.analytics.presentation.viewmodel.AnalyticsViewModel
+import com.ucb.app.form.presentation.viewmodel.FormViewModel
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 
@@ -36,4 +37,5 @@ val presentationModule = module {
     viewModelOf(::PortfolioViewModel)
     viewModelOf(::RemoteConfigViewModel)
     viewModelOf(::AnalyticsViewModel)
+    viewModelOf(::FormViewModel)
 }

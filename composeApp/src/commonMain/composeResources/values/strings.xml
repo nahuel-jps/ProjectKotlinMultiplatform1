@@ -13,4 +13,11 @@
     <string name="github_text_hint">GitHub username</string>
     <string name="analytics_title">Analytics</string>
     <string name="analytics_description">Logging events in background.</string>
+    <string name="form_title">Contact Form</string>
+    <string name="form_name_hint">Full name</string>
+    <string name="form_email_hint">Email address</string>
+    <string name="form_message_hint">Your message</string>
+    <string name="form_submit_btn">Submit</string>
+    <string name="form_auto_saved">Draft auto-saved</string>
+    <string name="form_submitted_ok">Form submitted successfully</string>
 </resources>

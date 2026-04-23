@@ -5,6 +5,8 @@ import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import com.ucb.app.core.data.db.AppDatabase
 import com.ucb.app.analytics.data.db.AnalyticsDatabase
 import com.ucb.app.analytics.data.db.getAnalyticsDatabaseBuilder
+import com.ucb.app.form.data.db.FormDraftDatabase
+import com.ucb.app.form.data.db.getFormDraftDatabaseBuilder
 import com.ucb.app.map.data.repository.LocationRepositoryImpl
 import com.ucb.app.map.domain.repository.LocationRepository
 import kotlinx.coroutines.Dispatchers
@@ -35,6 +37,16 @@ actual val platformModule = module {
     }
 
     single { get<AnalyticsDatabase>().getDao() }
+
+    single<FormDraftDatabase> {
+        val context = androidContext()
+        getFormDraftDatabaseBuilder(context)
+            .setDriver(BundledSQLiteDriver())
+            .setQueryCoroutineContext(Dispatchers.IO)
+            .build()
+    }
+
+    single { get<FormDraftDatabase>().getDao() }
 
     single<LocationRepository> {
         LocationRepositoryImpl(androidContext())

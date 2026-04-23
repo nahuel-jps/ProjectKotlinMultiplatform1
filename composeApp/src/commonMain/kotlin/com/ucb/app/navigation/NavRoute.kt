@@ -46,4 +46,7 @@ sealed class NavRoute {
 
     @Serializable
     object Analytics: NavRoute()
+
+    @Serializable
+    object Form: NavRoute()
 }

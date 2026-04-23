@@ -15,10 +15,11 @@ import com.ucb.app.portfolio.presentation.screen.PortfolioScreen
 import com.ucb.app.remoteconfig.presentation.screen.RemoteConfigScreen
 import com.ucb.app.example.presentation.screen.DesignSystemExampleScreen
 import com.ucb.app.analytics.presentation.screen.AnalyticsScreen
+import com.ucb.app.form.presentation.screen.FormScreen
 
 // fun AppNavhost(startDest: NavRoute = NavRoute.DesignSystemExample) // notificacion redireccion
 @Composable
-fun AppNavHost(startDest: NavRoute = NavRoute.Analytics) {
+fun AppNavHost(startDest: NavRoute = NavRoute.Form) {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = startDest) {
@@ -61,6 +62,9 @@ fun AppNavHost(startDest: NavRoute = NavRoute.Analytics) {
         }
         composable<NavRoute.Analytics> {
             AnalyticsScreen()
+        }
+        composable<NavRoute.Form> {
+            FormScreen()
         }
     }
 }

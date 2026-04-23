@@ -29,6 +29,13 @@ import com.ucb.app.analytics.data.datasource.AnalyticsRemoteDataSourceImpl
 import com.ucb.app.analytics.data.datasource.AnalyticsFirebaseManager
 import com.ucb.app.analytics.data.repository.AnalyticsRepositoryImpl
 import com.ucb.app.analytics.domain.repository.AnalyticsRepository
+import com.ucb.app.form.data.datasource.FormFirebaseManager
+import com.ucb.app.form.data.datasource.FormLocalDataSource
+import com.ucb.app.form.data.datasource.FormLocalDataSourceImpl
+import com.ucb.app.form.data.datasource.FormRemoteDataSource
+import com.ucb.app.form.data.datasource.FormRemoteDataSourceImpl
+import com.ucb.app.form.data.repository.FormDraftRepositoryImpl
+import com.ucb.app.form.domain.repository.FormDraftRepository
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.bind
 import org.koin.dsl.module
@@ -54,4 +61,9 @@ val dataModule = module {
     singleOf(::AnalyticsRemoteDataSourceImpl).bind<AnalyticsRemoteDataSource>()
     singleOf(::AnalyticsLocalDataSourceImpl).bind<AnalyticsLocalDataSource>()
     singleOf(::AnalyticsRepositoryImpl).bind<AnalyticsRepository>()
+
+    singleOf(::FormFirebaseManager)
+    singleOf(::FormRemoteDataSourceImpl).bind<FormRemoteDataSource>()
+    singleOf(::FormLocalDataSourceImpl).bind<FormLocalDataSource>()
+    singleOf(::FormDraftRepositoryImpl).bind<FormDraftRepository>()
 }

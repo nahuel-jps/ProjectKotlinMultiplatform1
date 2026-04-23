@@ -10,6 +10,9 @@ import com.ucb.app.portfolio.domain.usecase.GetPortfolioUseCase
 import com.ucb.app.portfolio.domain.usecase.SavePortfolioUseCase
 import com.ucb.app.remoteconfig.domain.usecase.GetRemoteConfigUseCase
 import com.ucb.app.analytics.domain.usecase.LogEventUseCase
+import com.ucb.app.form.domain.usecase.LoadDraftUseCase
+import com.ucb.app.form.domain.usecase.SaveDraftUseCase
+import com.ucb.app.form.domain.usecase.SubmitFormUseCase
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 
@@ -27,4 +30,8 @@ val domainModule = module {
     
     singleOf(::GetRemoteConfigUseCase)
     singleOf(::LogEventUseCase)
+
+    singleOf(::SaveDraftUseCase)
+    singleOf(::LoadDraftUseCase)
+    singleOf(::SubmitFormUseCase)
 }
